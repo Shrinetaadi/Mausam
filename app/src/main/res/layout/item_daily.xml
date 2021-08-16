@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:orientation="vertical"
+    android:paddingHorizontal="5dp">
+
+    <LinearLayout
+        android:id="@+id/llDaily"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_rounded_unselected"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/txtDailyDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunitobold"
+            android:gravity="center_horizontal"
+            android:paddingTop="15sp"
+            android:text="@string/today"
+            android:textColor="@color/appBlack"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/txtDailyDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunitobold"
+            android:gravity="center_horizontal"
+            android:text="@string/_8_11"
+            android:textColor="@color/appBlack"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/imgMorningWeather"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginVertical="15dp"
+            android:src="@drawable/ic_rainy" />
+
+        <TextView
+            android:id="@+id/txtMaxTemp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunitobold"
+            android:gravity="center_horizontal"
+            android:text="@string/_36_c"
+            android:textColor="@color/appBlack"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/txtMinTemp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/nunitobold"
+            android:gravity="center_horizontal"
+            android:text="@string/_36_c"
+            android:textColor="@color/appBlack"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/imgEveningWeather"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginVertical="15dp"
+            android:src="@drawable/ic_rainy" />
+
+        <TextView
+            android:id="@+id/txtWindSpeedDaily"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunitobold"
+            android:gravity="center_horizontal"
+            android:paddingHorizontal="10sp"
+            android:paddingBottom="15dp"
+            android:text="@string/_3_2km_h"
+            android:textColor="@color/appBlack"
+            android:textSize="15sp"
+            app:drawableStartCompat="@drawable/ic_leaf" />
+
+    </LinearLayout>
+</LinearLayout>

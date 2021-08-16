@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Mausam</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="testcity">San Fransisco</string>
+    <string name="city_name">Gautam Buddha Nagar</string>
+    <string name="turn_on_location_services">Turn on location services</string>
+    <string name="_30">30</string>
+    <string name="cloudy">Cloudy</string>
+    <string name="aqi_73">AQI 73</string>
+    <string name="_5_days_forecast">5-day forecast</string>
+    <string name="today_thunderstorm">Today Thunderstorm</string>
+    <string name="today_rainy">Today-Rainy</string>
+    <string name="now">Now</string>
+    <string name="sunset_19_07">Sunset 19:07</string>
+    <string name="sunrise_05_46">Sunrise 05:46</string>
+    <string name="real_feel">Real feel</string>
+    <string name="_3_2km_h">3.2km/h</string>
+    <string name="wind_speed">Wind speed</string>
+    <string name="_43">43%</string>
+    <string name="chance_of_rain">Chance of rain</string>
+    <string name="_32_c">32°C</string>
+    <string name="humidity">Humidity</string>
+    <string name="_79">79%</string>
+    <string name="pressure">Pressure</string>
+    <string name="_1004mbar">1004mbar</string>
+    <string name="uv_index">UV index</string>
+    <string name="_33_27">33° / 27°</string>
+    <string name="_3">3</string>
+    <string name="air_quality_Index">Air Quality Index</string>
+    <string name="_146">146</string>
+    <string name="full_air_quality_details">Full Air Quality Details></string>
+    <string name="today">Today</string>
+    <string name="_8_11">8/11</string>
+    <string name="_36_c">36°C</string>
+    <string name="_7days_forecast">7-Days Forecast</string>
+</resources>

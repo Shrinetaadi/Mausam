@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingHorizontal="20dp">
+
+    <TextView
+        android:id="@+id/txtHourTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunitobold"
+        android:text="@string/now"
+        android:textColor="@color/appWhite"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/txtHourTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:fontFamily="@font/nunitobold"
+        android:text="@string/_32_c"
+        android:textColor="@color/appWhite"
+        android:textSize="19sp" />
+
+    <ImageView
+        android:id="@+id/imgHourWheaterIcon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_rainy" />
+
+    <TextView
+        android:id="@+id/txtHourWindSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:drawablePadding="5dp"
+        android:fontFamily="@font/nunitobold"
+        android:text="@string/_3_2km_h"
+        android:textColor="@color/appWhite"
+        android:textSize="12sp"
+        app:drawableStartCompat="@drawable/ic_paper_plane"
+        app:drawableTint="@color/appWhite" />
+
+</LinearLayout>
