@@ -69,4 +69,16 @@ dependencies {
     // Glide
     implementation "com.github.bumptech.glide:glide:$glideVersion"
 
+    //Room Database
+    implementation 'androidx.room:room-runtime:2.3.0'
+    kapt 'androidx.room:room-compiler:2.3.0'
+    implementation 'androidx.room:room-ktx:2.3.0'
+
+    //rxjava
+    def rxBinding_version = "3.1.0"
+    implementation "com.jakewharton.rxbinding3:rxbinding:$rxBinding_version"
+
+    //corountines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.1'
+
 }

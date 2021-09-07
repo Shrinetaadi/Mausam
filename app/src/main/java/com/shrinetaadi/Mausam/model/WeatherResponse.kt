@@ -6,8 +6,8 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class WeatherResponse(
-    var lat: String,
-    var lon: String,
+    var lat: Double,
+    var lon: Double,
     var current: Current,
     var hourly: List<Hourly>,
     var daily: List<Daily>

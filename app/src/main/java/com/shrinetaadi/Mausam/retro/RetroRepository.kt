@@ -2,8 +2,10 @@ package com.shrinetaadi.Mausam.retro
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
-import com.shrinetaadi.Mausam.fragment.HomeFrag
+import com.shrinetaadi.Mausam.activity.MainActivity
+import com.shrinetaadi.Mausam.activity.OtherThingsActivity
 import com.shrinetaadi.Mausam.model.AirQuality
+import com.shrinetaadi.Mausam.model.WeatherLocation
 import com.shrinetaadi.Mausam.model.WeatherResponse
 import retrofit2.Call
 import retrofit2.Callback
@@ -37,7 +39,7 @@ class RetroRepository @Inject constructor(private val retroInstance: RetroServic
                 print("ERROR")
                 isLoading.value = false
                 error.value = true
-                Log.i(HomeFrag::class.java.simpleName, "Error", t)
+                Log.i(MainActivity::class.java.simpleName, "Error", t)
                 liveDatList.postValue(null)
             }
 
@@ -68,8 +70,44 @@ class RetroRepository @Inject constructor(private val retroInstance: RetroServic
                 print("ERROR")
                 isLoading.value = false
                 error.value = true
-                Log.i(HomeFrag::class.java.simpleName, "Error", t)
+                Log.i(MainActivity::class.java.simpleName, "Error", t)
                 liveAQIList.postValue(null)
+            }
+        }
+
+        )
+
+    }
+
+    fun makeSearchCall(
+        query: String,
+        weatherResult: MutableLiveData<List<WeatherLocation.City>>,
+        loading: MutableLiveData<Boolean>,
+        error: MutableLiveData<Boolean>
+    ) {
+        val call: Call<List<WeatherLocation.City>> = retroInstance.getLocation(query)
+        call?.enqueue(object : Callback<List<WeatherLocation.City>> {
+            override fun onResponse(
+                call: Call<List<WeatherLocation.City>>,
+                response: Response<List<WeatherLocation.City>>
+            ) {
+                loading.value = false
+                if (response.isSuccessful) {
+                    weatherResult.postValue(response.body())
+                    Log.i(OtherThingsActivity::class.java.simpleName, "Error0")
+                } else {
+                    error.value = true
+                    Log.i(OtherThingsActivity::class.java.simpleName, "Error1")
+                    weatherResult.postValue(null)
+                }
+            }
+
+            override fun onFailure(call: Call<List<WeatherLocation.City>>, t: Throwable) {
+                print("ERROR")
+                loading.value = false
+                error.value = true
+                Log.i(OtherThingsActivity::class.java.simpleName, "Error", t)
+                weatherResult.postValue(null)
             }
         }
 

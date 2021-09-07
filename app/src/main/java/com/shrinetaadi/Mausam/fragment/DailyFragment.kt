@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.shrinetaadi.Mausam.R
 import com.shrinetaadi.Mausam.adapter.RvDailyAdapter
 import com.shrinetaadi.Mausam.model.WeatherResponse
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_daily.*
 
 
@@ -39,6 +40,9 @@ class DailyFragment : Fragment(R.layout.fragment_daily) {
         rvDailyForecast.apply {
             layoutManager = dailyManager
             adapter = rvDailyAdapter
+        }
+        imgBackDaily.setOnClickListener {
+            requireActivity().onBackPressed()
         }
 
     }

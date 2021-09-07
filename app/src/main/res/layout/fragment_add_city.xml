@@ -4,10 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_rounded_unselected"
     android:orientation="vertical"
-    android:theme="@style/Theme.Mausam.Light"
-    tools:context=".fragment.DailyFragment">
+    tools:context=".fragment.AddCity">
 
     <LinearLayout
         android:id="@+id/llHeader2"
@@ -19,7 +17,7 @@
         android:paddingHorizontal="10dp">
 
         <ImageView
-            android:id="@+id/imgBackDaily"
+            android:id="@+id/imgBackAddCity"
             android:layout_width="36dp"
             android:layout_height="36dp"
             android:src="@drawable/ic_baseline_arrow_back_24"
@@ -30,18 +28,45 @@
             android:layout_height="match_parent"
             android:fontFamily="@font/nunitobold"
             android:paddingHorizontal="10dp"
-            android:text="@string/_7days_forecast"
+            android:text="@string/manage_cities"
             android:textColor="@color/appBlack"
             android:textSize="30sp" />
     </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvDailyForecast"
+    <LinearLayout
+        android:id="@+id/llSearch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_rounded_unselected"
+        android:elevation="7sp"
         android:orientation="horizontal"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="15dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_search"
+            app:tint="@color/appGray" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/nunitobold"
+            android:text="@string/search"
+            android:textColor="@color/appGray"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAddCity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/item_daily" />
+        tools:listitem="@layout/item_add_city" />
 
 </LinearLayout>
